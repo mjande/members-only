@@ -2,7 +2,11 @@
 
 <ul>
   <% @posts.each do |post| %>
-    <li><%= "#{post.body} - #{post.member.email}"%>
+    <% if member_signed_in? %>
+      <li><%= "#{post.body} - #{post.member.username}"%>
+    <% else %>
+      <li><%= post.body %></li>
+    <% end %>
   <% end %>
 </ul>
 
