@@ -1,21 +1,20 @@
-<div class="body">
-  <h1>The Members Only Clubhouse</h1>
+<h1>The Members Only Clubhouse</h1>
 
-  <h2>Posts</h2>
+<h2>Posts</h2>
 
-  <div class="posts-stream">
-    <% @posts.each do |post| %>
-      <div class="post">
-      <% if member_signed_in? %>
-          <div class="post-username"><%= post.member.username %></div>
-          <div class="post-body"><%= post.body %><br></div>
-      <% else %>
-        <div class="post-username">Anonymous</div>
-        <div class="post-body"><%= post.body %></div>
-      <% end %>
-      </div>
+<div class="posts-stream">
+  <% @posts.each do |post| %>
+    <div class="post">
+    <% if member_signed_in? %>
+        <div class="post-username"><%= post.member.username %></div>
+        <div class="post-body"><%= post.body %><br></div>
+    <% else %>
+      <div class="post-username">Anonymous</div>
+      <div class="post-body"><%= post.body %></div>
     <% end %>
-  </div>
+    </div>
+  <% end %>
+</div>
 
-  <div class="new-post"><%= link_to "New Post", new_post_path %></div>
-<div>
+<div class="new-post"><%= link_to "New Post", new_post_path %></div>
+
