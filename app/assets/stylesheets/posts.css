@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Light.ttf');
+}
+
+@font-face {
+  font-family: 'PlayfairDisplaySC';
+  src: url('PlayfairDisplaySC-Regular.ttf');
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify: space-around;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1; 
+  background-color: #659bdb;
+}
+
+h1,
+h2 {
+  font-family: PlayfairDisplaySC, serif;
+  color: white;
+}
+
+h2 {
+  margin: 12px;
+}
+
+.posts-stream {
+  padding: 0px 12px 6px 12px;
+  align-items: left;
+  display: flex; 
+  flex-flow: column wrap;
+  gap: .8em;
+  height: 70vh;
+  align-self: flex-start;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-family: Merriweather, sans-serif;
+}
+
+.post {
+  border: 3px solid grey;
+  margin: 3px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+  width: 40vw;
+  height: 4em;
+  flex-shrink: 1;
+  background-color: #fbeec1;
+}
+
+.post-body {
+  margin: 6px;
+}
+
+.post-username {
+  margin: 3px 6px 3px 6px 
+}
+
+.new-post {
+  border: 3px solid grey;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+  padding: 0.75rem;
+  margin: 1rem;
+  background-color: #fbeec1;
+  border-radius: 5px;
+  font-family: Merriweather, sans-serif;
+  font-size: 18px;
+}

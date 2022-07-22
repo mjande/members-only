@@ -1,0 +1,17 @@
+<div class="header">
+  <% if member_signed_in? %>
+    <div class="username"><%= current_member.username %></div>
+    <div class="edit-link"><%= link_to "Edit membership", edit_member_registration_path %></div>
+    <div class="logout"><%= button_to("Log out", destroy_member_session_path, method: :delete) %></div>
+  <% else %>
+    <div class="login"><%= link_to "Log in", new_member_session_path %></div>
+    <div class="register"><%= link_to "Register", new_member_registration_path %></div>
+  <% end %>
+
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Light.ttf');
+}
+
+.header {
+  height: 3rem;
+  width: 100%;
+  flex-grow: 0;
+  border-bottom: 1px solid #bc986a;
+  margin: 0px;
+  padding: 3px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  font-family: Merriweather, sans-serif;
+  background-color: #daad86;
+  padding-right: 1rem;
+}
+

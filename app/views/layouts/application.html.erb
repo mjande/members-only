@@ -11,20 +11,7 @@
   </head>
 
   <body>
-    <% if member_signed_in? %>
-      <%= link_to current_member.email, edit_member_registration_path %>
-      <%= button_to("Log out", destroy_member_session_path, method: :delete) %>
-    <% else %>
-      <%= link_to "Log in", new_member_session_path %>
-      <%= link_to "Register", new_member_registration_path %>
-    <% end %>
-
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+    <%= render "layouts/header" %>
     <%= yield %>
   </body>
 </html>
